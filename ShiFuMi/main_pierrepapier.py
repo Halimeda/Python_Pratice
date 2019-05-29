@@ -3,7 +3,6 @@ from Player import *
 
 number = int(input("How many players are you ? (1 or 2) : "))
 restart = True
-answer = ""
 
 if (number%2 != 0):
     player = Computer()
@@ -25,8 +24,8 @@ while restart:
         player.attack = attackChoice.lower()
         attackChoice = input("Choose your attack : ")
         player1.attack = attackChoice.lower()
-        player.attack.lower()
-        player1.attack.lower()
+        player.attack
+        player1.attack
         player1.fight(player)
 
 
