@@ -4,13 +4,14 @@ class PlayerType:
 
     def __init__(self, name):
         self.name = name
+        self.gameWin = 0
         self.win = 0
         self.attack =""
-        self.choice = ["rock", "paper", "scissors"]
+        self.choice = ["Rock", "Paper", "Scissors"]
     
     def fight (self, player):
         if self.attack == player.attack:
-            print("Égalité, rejoué")
+            print("Equality, play again")
         elif ((self.attack == "rock" or player.attack == "rock") and (self.attack == "paper" or player.attack == "paper")):
             print("Paper Win!")
             if(self.attack == "paper"):

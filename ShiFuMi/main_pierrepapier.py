@@ -18,12 +18,15 @@ while restart:
     while (player.win < 3 and player1.win < 3):
 
         if (number == 1):
-            player.ChoiceAttack()
+            attackChoice = player.ChoiceAttack()
             print(player.attack)
         else:
-            player.attack = input("Choose your attack : ")
-        player1.attack = input("Choose your attack : ")
-
+            attackChoice = input("Choose your attack : ")
+        player.attack = attackChoice.lower()
+        attackChoice = input("Choose your attack : ")
+        player1.attack = attackChoice.lower()
+        player.attack.lower()
+        player1.attack.lower()
         player1.fight(player)
 
 
@@ -32,13 +35,20 @@ while restart:
 
     if (player.win == 3):
         print(player.name, ", win !")
+        player.gameWin += 1
     else:
         print(player1.name, ", win !")
+        player1.gameWin += 1
 
     answer = input("Do you want to restart ? (yes or no)")
+    answer = answer.lower()
 
     if answer == "no":
         restart = False
+    else:
+        player.win = 0
+        player1.win =0
+
 
 
 
